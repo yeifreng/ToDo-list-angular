@@ -1,5 +1,6 @@
 
 <h2>Lista de tareas</h2>
-<input type="text" name="tareaAgregar" placeholder="Nueva tarea" required>
-<button type="button">Agregar tarea</button>
+<input type="text" name="tarea" placeholder="Nueva tarea" [(ngModel)]="tarea" required>
+<button type="button" (click)="enviarTarea()">Agregar tarea</button> <!-- 4. creamos un event binding para que al dar click llame al metodo -->
+
 

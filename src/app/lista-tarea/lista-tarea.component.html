@@ -1,8 +1,11 @@
 <div>
-  <app-agregar-tarea></app-agregar-tarea>
+  <!-- 7. Agregamos por event binding el valor que viene del input por medio de evento -->
+  <app-agregar-tarea (tareaEnviar)="agregarTarea($event)"></app-agregar-tarea>
 
   <ul>
     <li>
+      <!-- 8. Mostramos la tarea recibida desde el componente agregar-tarea -->
+      {{tareaRecibida}}
       <button type="button">Eliminar</button>
     </li>
   </ul>
