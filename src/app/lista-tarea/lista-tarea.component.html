@@ -3,10 +3,11 @@
   <app-agregar-tarea (tareaEnviar)="agregarTarea($event)"></app-agregar-tarea>
 
   <ul>
-    <li>
-      <!-- 8. Mostramos la tarea recibida desde el componente agregar-tarea -->
-      {{tareaRecibida}}
-      <button type="button">Eliminar</button>
+    <!-- Mostramos la lista de tareas por medio de un for -->
+    <li *ngFor="let tarea of listaTareas,  let i = index">
+      <!-- 8. Mostramos las tareas recibidas desde el componente agregar-tarea -->
+      {{tarea}}
+      <button type="button" (click)="eliminarTarea(i)">Eliminar</button>
     </li>
   </ul>
 </div>
